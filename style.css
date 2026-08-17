@@ -1,0 +1,518 @@
+/* =========================
+   GENERAL STYLES
+========================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #212529;
+}
+
+a {
+    transition: 0.3s;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar-brand {
+    color: #0d6efd;
+    font-size: 24px;
+}
+
+.navbar-brand:hover {
+    color: #084298;
+}
+
+.nav-link {
+    margin: 0 5px;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: #0d6efd;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero-section {
+    min-height: 500px;
+    padding: 100px 0 70px;
+
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.55)
+    ),
+    url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+.hero-section h1 {
+    font-size: 48px;
+}
+
+.hero-section p {
+    max-width: 600px;
+}
+
+
+/* =========================
+   SEARCH BOX
+========================= */
+
+.search-box {
+    color: #212529;
+    border-radius: 12px;
+}
+
+.search-box .form-control {
+    height: 48px;
+}
+
+.search-box .btn {
+    height: 48px;
+}
+
+
+/* =========================
+   DESTINATION CARDS
+========================= */
+
+.destination-card {
+    border: none;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* =========================
+   HOTEL CARDS
+========================= */
+
+.hotel-card {
+    border: none;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.hotel-card:hover {
+    transform: translateY(-5px);
+}
+
+.hotel-card .card-title {
+    font-weight: 600;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+    border-radius: 6px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    margin-top: 0;
+}
+
+footer a:hover {
+    color: white !important;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    .hero-section {
+        padding: 70px 20px 50px;
+        text-align: center;
+    }
+
+    .hero-section h1 {
+        font-size: 36px;
+    }
+
+    .hero-section p {
+        font-size: 17px;
+    }
+
+    .search-box {
+        text-align: left;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .hero-section h1 {
+        font-size: 30px;
+    }
+
+    .navbar-brand {
+        font-size: 21px;
+    }
+
+    .search-box {
+        padding: 20px !important;
+    }
+
+}
+
+/* =========================
+   ANIMATIONS / KEYFRAMES
+========================= */
+
+/* Hero text animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-section h1 {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.hero-section p {
+    animation: fadeInUp 1s ease forwards;
+}
+
+
+/* Search box animation */
+@keyframes searchAppear {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.search-box {
+    animation: searchAppear 1s ease forwards;
+}
+
+
+/* Card animation */
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.destination-card,
+.hotel-card {
+    animation: cardAppear 0.7s ease forwards;
+}
+
+
+/* Button hover animation */
+.btn {
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+
+/* Logo animation */
+@keyframes logoBounce {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.navbar-brand {
+    animation: logoBounce 0.6s ease;
+}
+
+
+/* =========================
+   LARGE DESKTOP
+   1200px+
+========================= */
+
+@media (min-width: 1200px) {
+
+    .hero-section {
+        min-height: 550px;
+        padding-top: 120px;
+    }
+
+    .hero-section h1 {
+        font-size: 52px;
+    }
+
+    .search-box {
+        padding: 30px !important;
+    }
+
+}
+
+
+/* =========================
+   DESKTOP / LAPTOP
+   992px - 1199px
+========================= */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .hero-section {
+        min-height: 500px;
+        padding: 100px 0 60px;
+    }
+
+    .hero-section h1 {
+        font-size: 46px;
+    }
+
+    .search-box {
+        margin-top: 40px !important;
+    }
+
+}
+
+
+/* =========================
+   TABLET
+   768px - 991px
+========================= */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .hero-section {
+        min-height: 480px;
+        padding: 80px 20px 50px;
+    }
+
+    .hero-section h1 {
+        font-size: 42px;
+    }
+
+    .hero-section p {
+        font-size: 18px;
+    }
+
+    .search-box {
+        margin-top: 35px !important;
+    }
+
+    .search-box .form-control {
+        height: 46px;
+    }
+
+    .search-box .btn {
+        height: 46px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+   576px - 767px
+========================= */
+
+@media (min-width: 576px) and (max-width: 767px) {
+
+    .hero-section {
+        min-height: 500px;
+        padding: 70px 20px 45px;
+    }
+
+    .hero-section h1 {
+        font-size: 36px;
+    }
+
+    .hero-section p {
+        font-size: 17px;
+    }
+
+    .search-box {
+        margin-top: 30px !important;
+        padding: 22px !important;
+    }
+
+    .destination-card,
+    .hotel-card {
+        margin-bottom: 10px;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+   400px - 575px
+========================= */
+
+@media (min-width: 400px) and (max-width: 575px) {
+
+    .hero-section {
+        min-height: 560px;
+        padding: 60px 15px 40px;
+    }
+
+    .hero-section h1 {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .hero-section p {
+        font-size: 16px;
+    }
+
+    .search-box {
+        padding: 20px !important;
+        margin-top: 25px !important;
+    }
+
+    .search-box .form-control {
+        height: 45px;
+    }
+
+    .search-box .btn {
+        height: 45px;
+    }
+
+    .destination-card,
+    .hotel-card {
+        margin-bottom: 15px;
+    }
+
+}
+
+
+/* =========================
+   EXTRA SMALL MOBILE
+   BELOW 400px
+========================= */
+
+@media (max-width: 399px) {
+
+    .hero-section {
+        min-height: 600px;
+        padding: 50px 12px 35px;
+    }
+
+    .hero-section h1 {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    .hero-section p {
+        font-size: 15px;
+    }
+
+    .search-box {
+        padding: 16px !important;
+        margin-top: 20px !important;
+    }
+
+    .search-box .form-label {
+        font-size: 14px;
+    }
+
+    .search-box .form-control {
+        height: 43px;
+        font-size: 14px;
+    }
+
+    .search-box .btn {
+        height: 43px;
+        font-size: 14px;
+    }
+
+    .navbar-brand {
+        font-size: 20px;
+    }
+
+    .destination-card,
+    .hotel-card {
+        margin-bottom: 15px;
+    }
+
+}
+
+
+/* =========================
+   LANDSCAPE MOBILE
+========================= */
+
+@media (max-width: 767px) and (orientation: landscape) {
+
+    .hero-section {
+        min-height: 450px;
+        padding: 50px 20px;
+    }
+
+    .hero-section h1 {
+        font-size: 32px;
+    }
+
+    .search-box {
+        margin-top: 25px !important;
+    }
+
+}
+
+
+/* =========================
+   REDUCED MOTION
+   Accessibility
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
